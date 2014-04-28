@@ -19,4 +19,4 @@ It's meant to demo how to:
 
 About the App
 -------------
-The application is written in C# and uses the new Alma APIs described [here](https://developers.exlibrisgroup.com/alma/apis). See also an extensive blog entry on this application [here](https://developers.exlibrisgroup.com). 
+The application is written in C# and uses the new Alma APIs described [here](https://developers.exlibrisgroup.com/alma/apis). See also an extensive blog entry on this application [here](https://developers.exlibrisgroup.com/blog/Creating-a-Student-Portal-with-the-New-Alma-APIs). 
