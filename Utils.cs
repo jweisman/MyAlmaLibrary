@@ -8,6 +8,7 @@ using System.Net.Cache;
 using System.Security.Claims;
 using System.Text;
 using System.Web;
+using System.Web.Mvc;
 
 namespace MyLibrary
 {
@@ -69,5 +70,17 @@ namespace MyLibrary
                 _APIKEY, randomNumber);
         }
         
+    }
+
+    public class AuthorizeWithSessionAttribute : AuthorizeAttribute
+    {
+        protected override bool AuthorizeCore(HttpContextBase httpContext)
+        {
+            if (httpContext.Session == null || httpContext.Session["CurrentUser"] == null)
+                return false;
+
+            return base.AuthorizeCore(httpContext);
+        }
+
     }
 }

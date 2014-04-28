@@ -1,7 +1,4 @@
 @using Microsoft.AspNet.Identity
-
-<!-- We need an email, so if there is no email, make sure we're not authenticated. -->
-@if (Session["email"] == null) { FormsAuthentication.SignOut(); Session.Abandon(); }
     
 @if (Request.IsAuthenticated)
 {

@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MyLibrary.Controllers
 {
-    [Authorize]
+    [AuthorizeWithSession]
     public class RequestsController : Controller
     {
         //

@@ -9,7 +9,7 @@ using MyLibrary.Models;
 
 namespace MyLibrary.Controllers
 {
-    [Authorize]
+    [AuthorizeWithSession]
     public class CardController : Controller
     {
         //
