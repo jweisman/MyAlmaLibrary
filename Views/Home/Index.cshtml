@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home";  
+}
+
+<div class="hero-unit" style="background-image: url('../img/background.jpg'); background-repeat: no-repeat; background-position:  top center;">
+    <h1>Welcome to My Alma Library</h1>
+    <p class="lead">This is your library, extended. Here you can view your personal information, check out your requests, or reserve a room on campus.</p>
+</div>
+<div class="row">
+    <div class="span4">
+        <h2>My Library Card</h2>
+        <p>View and update your personal information!</p>
+        <p>@Html.ActionLink("Library Card", "", "Card", null, new { @class = "btn btn-primary btn-small" })</p>
+    </div>
+    <div class="span4">
+        <h2>Requests</h2>
+        <p>View &amp; update your book requests....</p>
+        <p>@Html.ActionLink("Requests", "", "Requests", null, new { @class = "btn btn-primary btn-small" })</p>
+    </div>
+    <div class="span4">
+        <h2>Room Reservation</h2>
+        <p>Want to reserve a room for personal use? One click and you're on your way.</p>
+        <p>@Html.ActionLink("Rooms", "Index", "Rooms", null, new { @class = "btn btn-primary btn-small" })</p>
+    </div>
+</div>
