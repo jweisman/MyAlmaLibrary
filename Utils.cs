@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -76,7 +76,7 @@ namespace MyLibrary
     {
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            if (httpContext.Session == null || httpContext.Session["CurrentUser"] == null)
+            if (httpContext.Session == null || httpContext.Session["email"] == null)
                 return false;
 
             return base.AuthorizeCore(httpContext);

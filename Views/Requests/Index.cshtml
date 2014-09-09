@@ -12,17 +12,25 @@
         <p>Here are your requests:</p>
         <table cellpadding="5" border="1">
             <tr><th>Title</th><th>Author</th><th>Pick Up Location</th></tr>
-            @foreach (var request in Model["user_request"])
+            @if (Model["total_record_count"] > 0)
             { 
-                if (request["request_type"]=="HOLD")
+                foreach (var request in Model["user_request"])
                 { 
-                <tr>
-                    <td>@request["title"]</td>
-                    <td>@request["author"]</td>
-                    <td>@request["pickup_location"]</td>
-                    <td>@Html.ActionLink("Cancel request", "Cancel", new { requestId = @request["request_id"] })</td>
-                </tr>
+                    if (request["request_type"]=="HOLD")
+                    { 
+                    <tr>
+                        <td>@request["title"]</td>
+                        <td>@request["author"]</td>
+                        <td>@request["pickup_location"]</td>
+                        <td>@Html.ActionLink("Cancel request", "Cancel", 
+                            new { requestId = @request["request_id"] })</td>
+                    </tr>
+                    }
                 }
+            } 
+            else
+            { 
+                <tr><td colspan="3">No requests found.</td></tr>
             }
         </table>
     </div>

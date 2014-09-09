@@ -19,10 +19,10 @@
                 <tr><th>First Name:</th><td><input type="text" name="first_name" value='@Model["first_name"]'/></td></tr>
                 <tr><th>Middle Name:</th><td><input type="text" name="middle_name" value='@Model["middle_name"]'/></td></tr>
                 <tr><th>Last Name:</th><td><input type="text" name="last_name" value='@Model["last_name"]'/></td></tr>
-                <tr><th>Street Address:</th><td>@Model["contact_info"]["addresses"]["address"][0]["line1"]<td></tr>
-            <tr><th>City:</th><td>@Model["contact_info"]["addresses"]["address"][0]["city"]</td></tr>
-            <tr><th>State:</th><td>@Model["contact_info"]["addresses"]["address"][0]["state_province"]</td></tr>
-            <tr><th>ZIP Code:</th><td>@Model["contact_info"]["addresses"]["address"][0]["postal_code"]</td></tr>
+                <tr><th>Street Address:</th><td>@Model["contact_info"]["address"][0]["line1"]<td></tr>
+            <tr><th>City:</th><td>@Model["contact_info"]["address"][0]["city"]</td></tr>
+            <tr><th>State:</th><td>@Model["contact_info"]["address"][0]["state_province"]</td></tr>
+            <tr><th>ZIP Code:</th><td>@Model["contact_info"]["address"][0]["postal_code"]</td></tr>
         </table>
             <input type="submit" value="Update"/>
     </form>
