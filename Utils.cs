@@ -1,6 +1,7 @@
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -15,7 +16,7 @@ namespace MyLibrary
     public static class Utils
     {
         static string _BASEURL = "https://api-na.hosted.exlibrisgroup.com/almaws/v1";
-        static string _APIKEY = "l7xxed435824541543ce8c7298d023fa810f";
+        static string _APIKEY = ConfigurationManager.AppSettings["API_KEY"]; 
 
         public static string AlmaApiGet(string uri)
         {
