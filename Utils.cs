@@ -16,7 +16,7 @@ namespace MyLibrary
     public static class Utils
     {
         static string _BASEURL = "https://api-na.hosted.exlibrisgroup.com/almaws/v1";
-        static string _APIKEY = ConfigurationManager.AppSettings["API_KEY"]; 
+        static string _APIKEY = ConfigurationManager.AppSettings["API_KEY"];  // moved to PrivateSettings.config file
 
         public static string AlmaApiGet(string uri)
         {
