@@ -20,3 +20,5 @@ It's meant to demo how to:
 About the App
 -------------
 The application is written in C# and uses the new Alma APIs described [here](https://developers.exlibrisgroup.com/alma/apis). See also an extensive blog entry on this application [here](https://developers.exlibrisgroup.com/blog/Creating-a-Student-Portal-with-the-New-Alma-APIs). 
+
+For those who are interested, this application has been ported to Ruby on Rails and is available [here](https://github.com/jweisman/my-alma-rails-library).
